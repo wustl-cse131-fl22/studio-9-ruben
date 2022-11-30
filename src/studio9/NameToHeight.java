@@ -21,7 +21,23 @@ public class NameToHeight {
 		Scanner in = new Scanner(System.in);
 
 		// FIXME
-		throw new NotYetImplementedException();
+		Map<String, Integer> mapNameToHeight = new HashMap<String, Integer>();
+		mapNameToHeight.put("Rachel", 63);
+		mapNameToHeight.put("Ari", 61);
+		mapNameToHeight.put("Maya", 65);
+		mapNameToHeight.put("Ally", 64);
+		System.out.println("What is their name?");
+		String name = in.next();
+		//String name = in.next("What is their name?");
+		while(name != null) {
+			if(!mapNameToHeight.containsKey(name)) {
+				System.out.println("No Such Person");
+			}
+			System.out.println(name + "'s height is: " + mapNameToHeight.get(name));
+			System.out.println("What is their name?");
+			name = in.next();
+		}
+		//throw new NotYetImplementedException();
 
 	}
 }
